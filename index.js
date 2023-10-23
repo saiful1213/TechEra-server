@@ -69,10 +69,18 @@ async function run() {
       // load specifiec product
       app.get('/productadd/single/:id', async (req, res) => {
          const id = req.params.id;
-         console.log(id);
+         // console.log(id);
          const query = { _id: new ObjectId(id) }
          const result = await productsCollection.findOne(query);
          res.send(result);
+      })
+
+
+      app.get('/productadd/update/:id', async (req, res) => {
+         const id = req.params.id;
+         const query = { _id: new ObjectId(id) }
+         const result = await productsCollection.findOne(query);
+         res.send(result)
       })
 
 
@@ -87,13 +95,51 @@ async function run() {
       app.post('/productadd', async (req, res) => {
          const product = req.body;
          const result = await productsCollection.insertOne(product);
+         res.send(result)
+      })
+
+
+      // update product 
+      app.put('/productadd/update/:id', async (req, res) => {
+         const id = req.params.id
+         const product = req.body;
+         console.log(id, product)
+         const filter = { _id: new ObjectId(id) }
+         const options = { upsert: true }
+         const updateDoc = {
+            $set: {
+               ...product
+            }
+         }
+         const result = await productsCollection.updateOne(filter, updateDoc, options);
+         res.send(result);
+      })
+
+
+
+      //get multiple data for myCart
+      app.get('/cartData/products', async (req, res) => {
+         const cursor = await cartCollection.find().toArray();
+         res.send(cursor);
+      })
+
+
+
+      // delete a product from myCart
+      app.delete('/cartData/:id', async (req, res) => {
+         const id = req.params.id;
+         const query = { _id: new ObjectId(id) };
+         const result = await cartCollection.deleteOne(query);
+         res.send(result)
       })
 
 
       // add product in databse for myCart
       app.post('/cartData', async (req, res) => {
          const cart = req.body;
+         delete cart._id;
          const result = await cartCollection.insertOne(cart);
+         res.send(result);
       })
 
 
