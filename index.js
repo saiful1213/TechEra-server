@@ -6,14 +6,8 @@ const blogData = require('./brand.json');
 const app = express();
 const port = process.env.PORT || 5000
 
-// middleware
-// const corsOptions = {
-//    origin: '*',
-//    credentials: true,
-//    optionSuccessStatus: 200,
-// }
 
-// app.use(cors(corsOptions))
+// middleware
 app.use(cors());
 app.use(express.json());
 
@@ -26,8 +20,6 @@ app.get('/', (req, res) => {
 app.get('/blog', (req, res) => {
    res.json(blogData)
 })
-
-
 
 
 
@@ -87,7 +79,7 @@ async function run() {
       // load specifiec product for my cart
       app.get('/productadd/cart/:id', (req, res) => {
          const id = req.params.id;
-         // console.log(id);
+         console.log(id);
       })
 
 
