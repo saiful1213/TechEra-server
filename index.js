@@ -2,7 +2,7 @@ const express = require('express');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config()
 const cors = require('cors');
-// const brandData = require('./brand.json');
+const blogData = require('./brand.json');
 const app = express();
 const port = process.env.PORT || 5000
 
@@ -23,10 +23,10 @@ app.get('/', (req, res) => {
 })
 
 
-/* app.get('/brand', (req, res) => {
-   res.json(brandData)
+app.get('/blog', (req, res) => {
+   res.json(blogData)
 })
- */
+
 
 
 

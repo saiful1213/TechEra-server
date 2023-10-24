@@ -1,32 +1,26 @@
 [
   {
-    "brand_img": "https://i.ibb.co/YD8k58f/kin-shing-lai-QW-TVn-Gn0v-Y-unsplash.jpg",
-    "brand_name": "Apple",
-    "id": "1"
+    "id": 1,
+    "img": "https://i.ibb.co/g76QcQB/blog1.jpg",
+    "title": "Discovery incommode earnestly commanded mentions.",
+    "author_img": "https://i.ibb.co/JyrynW0/author1.jpg",
+    "author_name": "John Doe",
+    "job_position": "Author and Researcher"
   },
   {
-    "brand_img": "https://i.ibb.co/0mkkY6w/anh-nhat-wh-IInzo-Sukc-unsplash.jpg",
-    "brand_name": "Samsung",
-    "id": "2"
+    "id": 2,
+    "img": "https://i.ibb.co/FxYcbtk/blog2.jpg",
+    "title": "Everything melancholy uncommonly but solicitude.",
+    "author_img": "https://i.ibb.co/YyRzw24/author2.jpg",
+    "author_name": "Jane Smith",
+    "job_position": "Editor-in-chief"
   },
   {
-    "brand_img": "https://i.ibb.co/N2SYnwx/nikita-kostrykin-D3-Zdf-Bq-A4n-Q-unsplash.jpg",
-    "brand_name": "Sony",
-    "id": "3"
-  },
-  {
-    "brand_img": "https://i.ibb.co/LQL245Z/greg-bulla-l-Kj-X3-S4pdog-unsplash.jpg",
-    "brand_name": "Google",
-    "id": "4"
-  },
-  {
-    "brand_img": "https://i.ibb.co/FKQtvsS/onur-binay-q-Uj6wn-Re-X4o-unsplash.jpg",
-    "brand_name": "Intel",
-    "id": "5"
-  },
-  {
-    "brand_img": "https://i.ibb.co/bX0rqq5/isaac-smith-F5-V6d7n-Ps-LQ-unsplash.jpg",
-    "brand_name": "Nokia",
-    "id": "6"
+    "id": 3,
+    "img": "https://i.ibb.co/ysy2HbD/blog3.jpg",
+    "title": "Providing top quality cleaning and related services charms.",
+    "author_img": "https://i.ibb.co/12www6X/author3.jpg",
+    "author_name": "Alex Johnson",
+    "job_position": "Graphic Designer"
   }
 ]
